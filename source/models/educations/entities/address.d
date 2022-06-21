@@ -1,6 +1,6 @@
-module models.education.entities.address;
+module models.educations.entities.address;
 
 @safe:
-import models.education;
+import models.educations;
 
 // Address and shipping information. Used to store additional addresses for an account or contact.
