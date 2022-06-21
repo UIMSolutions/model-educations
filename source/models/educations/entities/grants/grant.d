@@ -1,4 +1,4 @@
-module models.educations.entities.grant;
+module models.educations.entities.grants.grant;
 
 @safe:
 import models.educations;
