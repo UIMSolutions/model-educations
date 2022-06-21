@@ -1,4 +1,4 @@
-module models.educations.entities.extracurricularparticipant;
+module models.educations.entities.extracurriculars.participant;
 
 @safe:
 import models.educations;

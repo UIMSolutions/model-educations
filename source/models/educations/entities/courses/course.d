@@ -1,4 +1,4 @@
-module models.educations.entities.course;
+module models.educations.entities.courses.course;
 
 @safe:
 import models.educations;

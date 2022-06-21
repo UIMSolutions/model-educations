@@ -1,4 +1,4 @@
-module models.educations.entities.academicperioddetail;
+module models.educations.entities.academicperiods.detail;
 
 @safe:
 import models.educations;
