@@ -1,0 +1,2 @@
+module models.education.entities;
+
