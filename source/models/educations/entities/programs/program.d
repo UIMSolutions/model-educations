@@ -13,6 +13,9 @@ class DProgramEntity : DOOPEntity {
 
     this
       .addValues([
+        OwnerIdAttribute, //	Owner Id	
+       ])
+      .addValues([
         "createdOn": StringAttribute, //	Date and time when the record was created.	
         "createdBy": StringAttribute, //	Shows who created the record.	
         "modifiedOn": StringAttribute, //	Date and time when the record was modified.	
@@ -21,7 +24,6 @@ class DProgramEntity : DOOPEntity {
         "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
         "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
-        "ownerId": StringAttribute, //	Owner Id	
         "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	
         "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	
         "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	
@@ -42,7 +44,6 @@ class DProgramEntity : DOOPEntity {
   }
 }
 mixin(EntityCalls!("ProgramEntity"));
-
 
 version(test_model_education) {
   unittest {
