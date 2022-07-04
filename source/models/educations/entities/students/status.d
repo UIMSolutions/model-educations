@@ -4,6 +4,7 @@ module models.educations.entities.students.status;
 import models.educations;
 
 // The master list of student statuses defined by the institution.
+// name = name of the custom entity.	higherEducation/StudentStatus
 class DStudentStatusEntity : DOOPEntity {
   mixin(EntityThis!("StudentStatusEntity"));
   
@@ -27,13 +28,11 @@ class DStudentStatusEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	higherEducation/StudentStatus
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	higherEducation/StudentStatus
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	higherEducation/StudentStatus
-        "versionNumber": StringAttribute, //	Version Number	higherEducation/StudentStatus
         "studentStatusId": StringAttribute, //	Unique identifier for entity instances	higherEducation/StudentStatus
         "stateCode": StringAttribute, //	Status of the Student Status	higherEducation/StudentStatus
         "stateCode_display": StringAttribute, //		higherEducation/StudentStatus
         "statusCode": StringAttribute, //	Reason for the status of the Student Status	higherEducation/StudentStatus
         "statusCode_display": StringAttribute, //		higherEducation/StudentStatus
-        "name": StringAttribute, //	The name of the custom entity.	higherEducation/StudentStatus
         "code": StringAttribute, //	Student Status Code	higherEducation/StudentStatus
         "externalIdentifier": StringAttribute, //	External Identifier	higherEducation/StudentStatus
         "externalSourceSystem": StringAttribute, //	External Source System	higherEducation/StudentStatus
@@ -43,7 +42,6 @@ class DStudentStatusEntity : DOOPEntity {
   }
 }
 mixin(EntityCalls!("StudentStatusEntity"));
-
 
 version(test_model_education) {
   unittest {
