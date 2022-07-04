@@ -32,7 +32,7 @@ class DAccomplishmentEntity : DOOPEntity {
         "accomplishmentType": StringAttribute, //		higherEducation/Accomplishments
         "accomplishmentType_display": StringAttribute, //		higherEducation/Accomplishments
         "description": StringAttribute, //	Description of the Accomplishment	higherEducation/Accomplishments
-        "name": StringAttribute, //	Required name field	higherEducation/Accomplishments
+        // "name": StringAttribute, //	Required name field	higherEducation/Accomplishments
         "studentId": StringAttribute, //	Field which identifies the student who completed the project	higherEducation/Accomplishments
         "stateCode": StringAttribute, //	Status of the Accomplishments	higherEducation/Accomplishments
         "stateCode_display": StringAttribute, //		higherEducation/Accomplishments
