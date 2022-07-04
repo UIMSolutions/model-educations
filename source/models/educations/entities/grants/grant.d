@@ -28,7 +28,6 @@ class DGrantEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "versionNumber": StringAttribute, //	Version Number	
         "grantId": StringAttribute, //	Unique identifier for entity instances	
         "exchangeRate": StringAttribute, //	Exchange rate for the currency associated with the entity with respect to the base currency.	
         "amount": StringAttribute, //	Amount offered to perform required research	

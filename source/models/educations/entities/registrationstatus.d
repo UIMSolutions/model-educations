@@ -28,7 +28,6 @@ class DRegistrationStatusEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "versionNumber": StringAttribute, //	Version Number	
         "registrationStatusId": StringAttribute, //	Unique identifier for entity instances	
         "stateCode": StringAttribute, //	Status of the Registration Status	
         "stateCode_display": StringAttribute, //		

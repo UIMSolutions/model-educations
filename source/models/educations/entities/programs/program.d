@@ -4,6 +4,7 @@ module models.educations.entities.programs.program;
 import models.educations;
 
 // The master list of all program levels offered by the institution.
+// name = Program Name	
 class DProgramEntity : DOOPEntity {
   mixin(EntityThis!("ProgramEntity"));
   
@@ -12,32 +13,30 @@ class DProgramEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOn": StringAttribute, //	Date and time when the record was created.	higherEducation/Program
-        "createdBy": StringAttribute, //	Shows who created the record.	higherEducation/Program
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	higherEducation/Program
-        "modifiedBy": StringAttribute, //	Shows who last updated the record.	higherEducation/Program
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	higherEducation/Program
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	higherEducation/Program
-        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/Program
-        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	higherEducation/Program
-        "ownerId": StringAttribute, //	Owner Id	higherEducation/Program
-        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	higherEducation/Program
-        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	higherEducation/Program
-        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	higherEducation/Program
-        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	higherEducation/Program
-        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	higherEducation/Program
-        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	higherEducation/Program
-        "versionNumber": StringAttribute, //	Version Number	higherEducation/Program
-        "programId": StringAttribute, //	Unique identifier for entity instances	higherEducation/Program
-        "stateCode": StringAttribute, //	Status of the Program	higherEducation/Program
-        "stateCode_display": StringAttribute, //		higherEducation/Program
-        "statusCode": StringAttribute, //	Reason for the status of the Program	higherEducation/Program
-        "statusCode_display": StringAttribute, //		higherEducation/Program
-        "name": StringAttribute, //	Program Name	higherEducation/Program
-        "code": StringAttribute, //	Program Code	higherEducation/Program
-        "externalIdentifier": StringAttribute, //	External Identifier	higherEducation/Program
-        "externalSourceSystem": StringAttribute, //	External Source System	higherEducation/Program
-        "externalSourceSystem_display": StringAttribute, //		higherEducation/Program
+        "createdOn": StringAttribute, //	Date and time when the record was created.	
+        "createdBy": StringAttribute, //	Shows who created the record.	
+        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	
+        "modifiedBy": StringAttribute, //	Shows who last updated the record.	
+        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	
+        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
+        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
+        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
+        "ownerId": StringAttribute, //	Owner Id	
+        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	
+        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	
+        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	
+        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
+        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
+        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
+        "programId": StringAttribute, //	Unique identifier for entity instances	
+        "stateCode": StringAttribute, //	Status of the Program	
+        "stateCode_display": StringAttribute, //		
+        "statusCode": StringAttribute, //	Reason for the status of the Program	
+        "statusCode_display": StringAttribute, //		
+        "code": StringAttribute, //	Program Code	
+        "externalIdentifier": StringAttribute, //	External Identifier	
+        "externalSourceSystem": StringAttribute, //	External Source System	
+        "externalSourceSystem_display": StringAttribute, //		
       ])
       .registerPath("education_programs");
   }

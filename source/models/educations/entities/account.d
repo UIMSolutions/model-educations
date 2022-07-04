@@ -28,7 +28,6 @@ class DAccountEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "versionNumber": StringAttribute, //	Version Number	
         "accountId": StringAttribute, //	Unique identifier of the account.	
         "accountCategoryCode": StringAttribute, //	Select a category to indicate whether the customer account is standard or preferred.	
         "accountCategoryCode_display": StringAttribute, //		

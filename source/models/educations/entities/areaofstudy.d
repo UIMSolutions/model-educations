@@ -28,7 +28,6 @@ class DAreaOfStudyEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "versionNumber": StringAttribute, //	Version Number	
         "areaOfStudyId": StringAttribute, //	Unique identifier for entity instances	
         "stateCode": StringAttribute, //	Status of the Area of Study	
         "stateCode_display": StringAttribute, //		
