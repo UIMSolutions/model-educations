@@ -1,1 +1,1 @@
-module models.myName.attributes.elements;
+module models.educations.attributes.elements;
