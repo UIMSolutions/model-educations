@@ -12,35 +12,35 @@ class DInternshipEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	higherEducation/Internship
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	higherEducation/Internship
-        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/Internship
-        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	higherEducation/Internship
-        "ownerId": StringAttribute, //	Owner Id	higherEducation/Internship
-        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	higherEducation/Internship
-        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	higherEducation/Internship
-        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	higherEducation/Internship
-        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	higherEducation/Internship
-        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	higherEducation/Internship
-        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	higherEducation/Internship
-        "versionNumber": StringAttribute, //	Version Number	higherEducation/Internship
-        "internshipId": StringAttribute, //	Unique identifier for entity instances	higherEducation/Internship
-        "applicationDeadlineDate": StringAttribute, //	Last date to apply for internship	higherEducation/Internship
-        "businessPartnerId": StringAttribute, //	Business Partner	higherEducation/Internship
-        "businessPartnerContactId": StringAttribute, //	Internship point of contact	higherEducation/Internship
-        "description": StringAttribute, //	Description about the internship	higherEducation/Internship
-        "isPaid": StringAttribute, //	Is the internship paid/unpaid	higherEducation/Internship
-        "locationDescription": StringAttribute, //	Location where work is performed	higherEducation/Internship
-        "postedDate": StringAttribute, //	Date the internship was posted	higherEducation/Internship
-        "qualifications": StringAttribute, //	Qualifications required to be eligible for Internship	higherEducation/Internship
-        "title": StringAttribute, //	Required name field	higherEducation/Internship
-        "validFrom": StringAttribute, //	Start date of the internship	higherEducation/Internship
-        "validTo": StringAttribute, //	End date of the internship	higherEducation/Internship
-        "websiteURL": StringAttribute, //	Internship URL	higherEducation/Internship
-        "stateCode": StringAttribute, //	Status of the Internship	higherEducation/Internship
-        "stateCode_display": StringAttribute, //		higherEducation/Internship
-        "statusCode": StringAttribute, //	Reason for the status of the Internship	higherEducation/Internship
-        "statusCode_display": StringAttribute, //		higherEducation/Internship
+        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	
+        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
+        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
+        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
+        "ownerId": StringAttribute, //	Owner Id	
+        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	
+        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	
+        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	
+        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
+        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
+        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
+        "versionNumber": StringAttribute, //	Version Number	
+        "internshipId": StringAttribute, //	Unique identifier for entity instances	
+        "applicationDeadlineDate": StringAttribute, //	Last date to apply for internship	
+        "businessPartnerId": StringAttribute, //	Business Partner	
+        "businessPartnerContactId": StringAttribute, //	Internship point of contact	
+        "description": StringAttribute, //	Description about the internship	
+        "isPaid": StringAttribute, //	Is the internship paid/unpaid	
+        "locationDescription": StringAttribute, //	Location where work is performed	
+        "postedDate": StringAttribute, //	Date the internship was posted	
+        "qualifications": StringAttribute, //	Qualifications required to be eligible for Internship	
+        "title": StringAttribute, //	Required name field	
+        "validFrom": StringAttribute, //	Start date of the internship	
+        "validTo": StringAttribute, //	End date of the internship	
+        "websiteURL": StringAttribute, //	Internship URL	
+        "stateCode": StringAttribute, //	Status of the Internship	
+        "stateCode_display": StringAttribute, //		
+        "statusCode": StringAttribute, //	Reason for the status of the Internship	
+        "statusCode_display": StringAttribute, //		
       ])
       .registerPath("education_internships");
   }
