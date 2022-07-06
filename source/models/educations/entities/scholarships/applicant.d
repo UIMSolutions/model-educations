@@ -4,6 +4,7 @@ module models.educations.entities.scholarships.applicant;
 import models.educations;
 
 // This entity is used as an scholarship application form and to store the list of students who have applied to a particular scholarship.
+// name = Required name field
 class DScholarshipApplicantEntity : DOOPEntity {
   mixin(EntityThis!("ScholarshipApplicantEntity"));
   
@@ -29,7 +30,6 @@ class DScholarshipApplicantEntity : DOOPEntity {
         "applicationStateCode": StringAttribute, //	
         "applicationStateCode_display": StringAttribute, //	
         "businessPartnerId": StringAttribute, //	Partner offering scholarship
-        "name": StringAttribute, //	Required name field
         "offerAcceptedDate": StringAttribute, //	Date the offer was accepted
         "offerDeadlineDate": StringAttribute, //	Deadline to accept the offer
         "offerMadeDate": StringAttribute, //	Date the offer was made

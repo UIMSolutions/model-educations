@@ -11,12 +11,16 @@ class DContactEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute,
+        StateCodeAttribute,
+        StatusCodeAttribute
+      ])
+      .addValues([ // individual values
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
         "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
-        "ownerId": StringAttribute, //	Owner Id	
         "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	
         "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	
         "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	
@@ -97,11 +101,7 @@ class DContactEntity : DOOPEntity {
         "telephone3": StringAttribute, //	Type a third phone number for this contact.	
         "fax": StringAttribute, //	Type the fax number for the contact.	
         "aging30": StringAttribute, //	For system use only.	
-        "stateCode": StringAttribute, //	Shows whether the contact is active or inactive. Inactive contacts are read-only and can't be edited unless they are reactivated.	
-        "stateCode_display": StringAttribute, //		
         "aging60": StringAttribute, //	For system use only.	
-        "statusCode": StringAttribute, //	Select the contact's status.	
-        "statusCode_display": StringAttribute, //		
         "aging90": StringAttribute, //	For system use only.	
         "parentContactId": StringAttribute, //	Unique identifier of the parent contact.	
         "address1AddressId": StringAttribute, //	Unique identifier for address n.	

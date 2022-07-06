@@ -11,12 +11,16 @@ class DEducationLevelEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute,
+        StateCodeAttribute,
+        StatusCodeAttribute
+      ])
+      .addValues([ // individual values
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
         "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
-        "ownerId": StringAttribute, //	Owner Id	
         "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	
         "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	
         "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	
@@ -24,11 +28,6 @@ class DEducationLevelEntity : DOOPEntity {
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
         "educationLevelId": StringAttribute, //	Unique identifier for entity instances	
-        "stateCode": StringAttribute, //	Status of the Education Level	
-        "stateCode_display": StringAttribute, //		
-        "statusCode": StringAttribute, //	Reason for the status of the Education Level	
-        "statusCode_display": StringAttribute, //		
-        "name": StringAttribute, //	Education Level instance name	
         "code": StringAttribute, //	Education Level Code	
         "externalIdentifier": StringAttribute, //	External Identifier	
         "externalSourceSystem": StringAttribute, //	External Source System	
