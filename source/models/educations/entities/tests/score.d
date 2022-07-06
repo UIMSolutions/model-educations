@@ -11,9 +11,14 @@ class DTestScoreEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute,
+        StateCodeAttribute,
+        StatusCodeAttribute
+      ])
+      .addValues([ // individual values  
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
         "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
         "ownerId": StringAttribute, //	Owner Id	
@@ -23,13 +28,7 @@ class DTestScoreEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "versionNumber": StringAttribute, //	Version Number	
         "testScoreId": StringAttribute, //	Unique identifier for entity instances	
-        "stateCode": StringAttribute, //	Status of the Test Score	
-        "stateCode_display": StringAttribute, //		
-        "statusCode": StringAttribute, //	Reason for the status of the Test Score	
-        "statusCode_display": StringAttribute, //		
-        "name": StringAttribute, //	The name of the Test Score.	
         "actComposite": StringAttribute, //	ACT - Composite Score	
         "actELA": StringAttribute, //	ACT - ELA Score	
         "actEnglish": StringAttribute, //	ACT - English Score	
@@ -40,28 +39,28 @@ class DTestScoreEntity : DOOPEntity {
         "actSTEM": StringAttribute, //	ACT - STEM Score	
         "actWriting": StringAttribute, //	ACT - Writing Score	
         "alevelArt": StringAttribute, //	A-level Art	
-        "GMATAnalyticalWriting": StringAttribute, //	GMAT - Analytical Writing Score	
-        "GMATIntegratedReasoning": StringAttribute, //	GMAT - Integrated Reasoning Score	
-        "GMATQuantitativeReasoning": StringAttribute, //	GMAT - Quantitative Reasoning Score	
-        "GMATTotal": StringAttribute, //	GMAT - Total Score	
-        "GMATVerbalReasoning": StringAttribute, //	GMAT - Verbal Reasoning Score	
+        "gmaTAnalyticalWriting": StringAttribute, //	GMAT - Analytical Writing Score	
+        "gmaTIntegratedReasoning": StringAttribute, //	GMAT - Integrated Reasoning Score	
+        "gmaTQuantitativeReasoning": StringAttribute, //	GMAT - Quantitative Reasoning Score	
+        "gmaTTotal": StringAttribute, //	GMAT - Total Score	
+        "gmaTVerbalReasoning": StringAttribute, //	GMAT - Verbal Reasoning Score	
         "GREAnalyticalReasoning": StringAttribute, //	GRE - Analytical Reasoning Score	
         "GREQuantitativeReasoning": StringAttribute, //	GRE - Quantitative Reasoning Score	
         "GRETotalScore": StringAttribute, //	GRE - Total Score	
         "GREVerbalReasoning": StringAttribute, //	GRE - Verbal Reasoning Score	
-        "IELTSCEFR": StringAttribute, //	IELTS - CEFR	
-        "IELTSCEFR_display": StringAttribute, //		
-        "IELTSListening": StringAttribute, //	IELTS - Listening score	
-        "IELTSOverallBandScore": StringAttribute, //	IELTS - Overall Band Score	
-        "IELTSReading": StringAttribute, //	IELTS - Reading Score	
-        "IELTSSpeakingScore": StringAttribute, //	IELTS - Speaking Score	
-        "IELTSWriting": StringAttribute, //	IELTS - Writing Score	
-        "SATEssayAnalysis": StringAttribute, //	SAT - SAT Essay - Analysis Score	
-        "SATEssayReading": StringAttribute, //	SAT - SAT Essay - Reading Score	
-        "SATEssayWriting": StringAttribute, //	SAT - SAT Essay - Writing Score	
-        "SATEvidenceBasedReadingandWritingSection": StringAttribute, //	SAT - Evidence-Based Reading and Writing Section Score	
-        "SATMathSection": StringAttribute, //	SAT - Math Section Score	
-        "SATTotalScore": StringAttribute, //	SAT - Total Score	
+        "ieltSCEFR": StringAttribute, //	ieltS - CEFR	
+        "ieltSCEFR_display": StringAttribute, //		
+        "ieltSListening": StringAttribute, //	ieltS - Listening score	
+        "ieltSOverallBandScore": StringAttribute, //	ieltS - Overall Band Score	
+        "ieltSReading": StringAttribute, //	ieltS - Reading Score	
+        "ieltSSpeakingScore": StringAttribute, //	ieltS - Speaking Score	
+        "ieltSWriting": StringAttribute, //	ieltS - Writing Score	
+        "satEssayAnalysis": StringAttribute, //	SAT - SAT Essay - Analysis Score	
+        "satEssayReading": StringAttribute, //	SAT - SAT Essay - Reading Score	
+        "satEssayWriting": StringAttribute, //	SAT - SAT Essay - Writing Score	
+        "satEvidenceBasedReadingandWritingSection": StringAttribute, //	SAT - Evidence-Based Reading and Writing Section Score	
+        "satMathSection": StringAttribute, //	SAT - Math Section Score	
+        "satTotalScore": StringAttribute, //	SAT - Total Score	
         "studentID": StringAttribute, //	Lookup to the Student (Contact Id)	
         "testDate": StringAttribute, //	Date when test was taken	
         "testLocation": StringAttribute, //	Location where the test was taken	
