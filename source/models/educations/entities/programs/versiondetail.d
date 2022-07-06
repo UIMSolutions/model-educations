@@ -12,10 +12,6 @@ class DProgramVersionDetailEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOn": StringAttribute, //	Date and time when the record was created.	higherEducation/ProgramVersionDetail
-        "createdBy": StringAttribute, //	Shows who created the record.	higherEducation/ProgramVersionDetail
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	higherEducation/ProgramVersionDetail
-        "modifiedBy": StringAttribute, //	Shows who last updated the record.	higherEducation/ProgramVersionDetail
         "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	higherEducation/ProgramVersionDetail
         "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	higherEducation/ProgramVersionDetail
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/ProgramVersionDetail
