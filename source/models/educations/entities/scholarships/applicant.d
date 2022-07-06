@@ -12,37 +12,37 @@ class DScholarshipApplicantEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	higherEducation/ScholarshipApplicant
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	higherEducation/ScholarshipApplicant
-        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/ScholarshipApplicant
-        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	higherEducation/ScholarshipApplicant
-        "ownerId": StringAttribute, //	Owner Id	higherEducation/ScholarshipApplicant
-        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	higherEducation/ScholarshipApplicant
-        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	higherEducation/ScholarshipApplicant
-        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	higherEducation/ScholarshipApplicant
-        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	higherEducation/ScholarshipApplicant
-        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	higherEducation/ScholarshipApplicant
-        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	higherEducation/ScholarshipApplicant
-        "versionNumber": StringAttribute, //	Version Number	higherEducation/ScholarshipApplicant
-        "scholarshipApplicantId": StringAttribute, //	Unique identifier for entity instances	higherEducation/ScholarshipApplicant
-        "applicantId": StringAttribute, //	Scholarship applicant	higherEducation/ScholarshipApplicant
-        "applicationStateCode": StringAttribute, //		higherEducation/ScholarshipApplicant
-        "applicationStateCode_display": StringAttribute, //		higherEducation/ScholarshipApplicant
-        "businessPartnerId": StringAttribute, //	Partner offering scholarship	higherEducation/ScholarshipApplicant
-        "name": StringAttribute, //	Required name field	higherEducation/ScholarshipApplicant
-        "offerAcceptedDate": StringAttribute, //	Date the offer was accepted	higherEducation/ScholarshipApplicant
-        "offerDeadlineDate": StringAttribute, //	Deadline to accept the offer	higherEducation/ScholarshipApplicant
-        "offerMadeDate": StringAttribute, //	Date the offer was made	higherEducation/ScholarshipApplicant
-        "qualificationDescription": StringAttribute, //	Description about why an applicant should be selected for the scholarship	higherEducation/ScholarshipApplicant
-        "scholarshipId": StringAttribute, //	Scholarship Applied for	higherEducation/ScholarshipApplicant
-        "submissionDate": StringAttribute, //	Date the application was submitted	higherEducation/ScholarshipApplicant
-        "processId": StringAttribute, //	Contains the id of the process associated with the entity.	higherEducation/ScholarshipApplicant
-        "deprecatedStageId": StringAttribute, //	Contains the id of the stage where the entity is located.	higherEducation/ScholarshipApplicant
-        "stateCode": StringAttribute, //	Status of the Scholarship Applicant	higherEducation/ScholarshipApplicant
-        "stateCode_display": StringAttribute, //		higherEducation/ScholarshipApplicant
-        "statusCode": StringAttribute, //	Reason for the status of the Scholarship Applicant	higherEducation/ScholarshipApplicant
-        "statusCode_display": StringAttribute, //		higherEducation/ScholarshipApplicant
-        "deprecatedTraversedPath": StringAttribute, //	A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.	higherEducation/ScholarshipApplicant
+        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.
+        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.
+        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.
+        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.
+        "ownerId": StringAttribute, //	Owner Id
+        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.
+        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record
+        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.
+        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.
+        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.
+        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.
+        "versionNumber": StringAttribute, //	Version Number
+        "scholarshipApplicantId": StringAttribute, //	Unique identifier for entity instances
+        "applicantId": StringAttribute, //	Scholarship applicant
+        "applicationStateCode": StringAttribute, //	
+        "applicationStateCode_display": StringAttribute, //	
+        "businessPartnerId": StringAttribute, //	Partner offering scholarship
+        "name": StringAttribute, //	Required name field
+        "offerAcceptedDate": StringAttribute, //	Date the offer was accepted
+        "offerDeadlineDate": StringAttribute, //	Deadline to accept the offer
+        "offerMadeDate": StringAttribute, //	Date the offer was made
+        "qualificationDescription": StringAttribute, //	Description about why an applicant should be selected for the scholarship
+        "scholarshipId": StringAttribute, //	Scholarship Applied for
+        "submissionDate": StringAttribute, //	Date the application was submitted
+        "processId": StringAttribute, //	Contains the id of the process associated with the entity.
+        "deprecatedStageId": StringAttribute, //	Contains the id of the stage where the entity is located.
+        "stateCode": StringAttribute, //	Status of the Scholarship Applicant
+        "stateCode_display": StringAttribute, //	
+        "statusCode": StringAttribute, //	Reason for the status of the Scholarship Applicant
+        "statusCode_display": StringAttribute, //	
+        "deprecatedTraversedPath": StringAttribute, //	A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.
       ])
       .registerPath("education_scholarships.applicants");
   }

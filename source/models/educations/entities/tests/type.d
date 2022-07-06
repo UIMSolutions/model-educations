@@ -12,28 +12,28 @@ class DTestTypeEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOn": StringAttribute, //	Date and time when the record was created.	higherEducation/TestType
-        "createdBy": StringAttribute, //	Shows who created the record.	higherEducation/TestType
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	higherEducation/TestType
-        "modifiedBy": StringAttribute, //	Shows who last updated the record.	higherEducation/TestType
-        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	higherEducation/TestType
-        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	higherEducation/TestType
-        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/TestType
-        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	higherEducation/TestType
-        "ownerId": StringAttribute, //	Owner Id	higherEducation/TestType
-        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	higherEducation/TestType
-        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	higherEducation/TestType
-        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	higherEducation/TestType
-        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	higherEducation/TestType
-        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	higherEducation/TestType
-        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	higherEducation/TestType
-        "versionNumber": StringAttribute, //	Version Number	higherEducation/TestType
-        "testTypeId": StringAttribute, //	Unique identifier for entity instances	higherEducation/TestType
-        "stateCode": StringAttribute, //	Status of the Test Type	higherEducation/TestType
-        "stateCode_display": StringAttribute, //		higherEducation/TestType
-        "statusCode": StringAttribute, //	Reason for the status of the Test Type	higherEducation/TestType
-        "statusCode_display": StringAttribute, //		higherEducation/TestType
-        "name": StringAttribute, //	The name of the custom entity.	higherEducation/TestType      
+        "createdOn": StringAttribute, //	Date and time when the record was created.
+        "createdBy": StringAttribute, //	Shows who created the record.
+        "modifiedOn": StringAttribute, //	Date and time when the record was modified.
+        "modifiedBy": StringAttribute, //	Shows who last updated the record.
+        "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.
+        "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.
+        "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.
+        "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.
+        "ownerId": StringAttribute, //	Owner Id
+        "ownerIdType": StringAttribute, //	The type of owner, either User or Team.
+        "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record
+        "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.
+        "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.
+        "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.
+        "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.
+        "versionNumber": StringAttribute, //	Version Number
+        "testTypeId": StringAttribute, //	Unique identifier for entity instances
+        "stateCode": StringAttribute, //	Status of the Test Type
+        "stateCode_display": StringAttribute, //	
+        "statusCode": StringAttribute, //	Reason for the status of the Test Type
+        "statusCode_display": StringAttribute, //	
+        "name": StringAttribute, //	The name of the custom entity.      
       ])
       .registerPath("education_test.types");
   }
