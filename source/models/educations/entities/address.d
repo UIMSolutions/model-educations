@@ -44,10 +44,6 @@ class DAddressEntity : DOOPEntity {
         "telephone3": StringAttribute, //	Type a third phone number for the customer's address.	
         "fax": StringAttribute, //	Type the fax number associated with the customer's address.	
         "versionNumber": StringAttribute, //	Version number of the customer address.	
-        "createdBy": StringAttribute, //	Shows who created the record.	
-        "createdOn": StringAttribute, //	Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.	
-        "modifiedBy": StringAttribute, //	Shows who last updated the record.	
-        "modifiedOn": StringAttribute, //	Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.	
         "owningBusinessUnit": StringAttribute, //	Shows the business unit that the record owner belongs to.	
         "owningUser": StringAttribute, //	Unique identifier of the user who owns the customer address.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	

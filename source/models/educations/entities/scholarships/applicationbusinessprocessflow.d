@@ -18,12 +18,8 @@ class DScholarshipApplicationBusinessProcessFlowEntity : DOOPEntity {
         "mshied_ScholarshipapplicantId": StringAttribute, //	
         "name": StringAttribute, //	Description
         "completedOn": StringAttribute, //	Date and time when Business Process Flow instance is completed.
-        "createdBy": StringAttribute, //	Unique identifier of the user who created the record.
-        "createdOn": StringAttribute, //	Date and time when the record was created.
         "createdOnBehalfBy": StringAttribute, //	Unique identifier of the delegate user who created the record.
         "importSequenceNumber": StringAttribute, //	Sequence number of the import that created this record.
-        "modifiedBy": StringAttribute, //	Unique identifier of the user who modified the record.
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.
         "modifiedOnBehalfBy": StringAttribute, //	Unique identifier of the delegate user who modified the record.
         "organizationId": StringAttribute, //	Unique identifier for the organization
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.
