@@ -11,12 +11,16 @@ class DInternshipApplicantEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user.	
-        "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user.	
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute,
+        StateCodeAttribute,
+        StatusCodeAttribute
+      ])
+      .addValues([ // individual values  
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated.	
         "importSequenceNumber": StringAttribute, // Unique identifier of the data import or data migration that created this record.	
-        "ownerId": StringAttribute, // Owner Id	
         "ownerIdType": StringAttribute, // The type of owner, either User or Team.	
         "owningBusinessUnit": StringAttribute, // Unique identifier for the business unit that owns the record	
         "owningUser": StringAttribute, // Unique identifier of the user that owns the activity.	
@@ -30,7 +34,6 @@ class DInternshipApplicantEntity : DOOPEntity {
         "businessPartnerId": StringAttribute, // Partner offering internship	
         "internshipId": StringAttribute, // Internship being applied for	
         "isWillingToRelocate": StringAttribute, // Is the applicant willing to relocate	
-        "name": StringAttribute, // Required name field	
         "offerAcceptedDate": StringAttribute, // Date the offer was accepted	
         "offerDeadlineDate": StringAttribute, // Deadline to accept the offer	
         "offerMadeDate": StringAttribute, // Date the offer was made	
@@ -38,10 +41,6 @@ class DInternshipApplicantEntity : DOOPEntity {
         "submissionDate": StringAttribute, // Date the application was submitted	
         "processId": StringAttribute, // Contains the id of the process associated with the entity.	
         "deprecatedStageId": StringAttribute, // Contains the id of the stage where the entity is located.	
-        "stateCode": StringAttribute, // Status of the Internship Applicant	
-        "stateCode_display": StringAttribute, // 	
-        "statusCode": StringAttribute, // Reason for the status of the Internship Applicant	
-        "statusCode_display": StringAttribute, // 	
         "deprecatedTraversedPath": StringAttribute, // A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.	
       ])
       .registerPath("education_internships.applicants");
