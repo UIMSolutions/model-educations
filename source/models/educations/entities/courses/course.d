@@ -13,10 +13,6 @@ class DCourseEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOn": StringAttribute, //	Date and time when the record was created.	
-        "createdBy": StringAttribute, //	Shows who created the record.	
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	
-        "modifiedBy": StringAttribute, //	Shows who last updated the record.	
         "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	
         "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
@@ -28,7 +24,6 @@ class DCourseEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "versionNumber": StringAttribute, //	Version Number	
         "courseId": StringAttribute, //	Unique identifier for entity instances	
         "stateCode": StringAttribute, //	Status of the Course	
         "stateCode_display": StringAttribute, //		

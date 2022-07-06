@@ -12,10 +12,6 @@ class DInternshipApplicantEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOn": StringAttribute, // Date and time when the record was created.	
-        "createdBy": StringAttribute, // Shows who created the record.	
-        "modifiedOn": StringAttribute, // Date and time when the record was modified.	
-        "modifiedBy": StringAttribute, // Shows who last updated the record.	
         "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user.	
         "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user.	
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated.	

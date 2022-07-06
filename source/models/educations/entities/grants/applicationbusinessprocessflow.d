@@ -18,12 +18,8 @@ class DGrantApplicationBusinessProcessFlowEntity : DOOPEntity {
         "mshied_GrantapplicantId": StringAttribute, //		higherEducation/GrantApplicationBusinessProcessFlow
         "name": StringAttribute, //	Description	higherEducation/GrantApplicationBusinessProcessFlow
         "completedOn": StringAttribute, //	Date and time when Business Process Flow instance is completed.	higherEducation/GrantApplicationBusinessProcessFlow
-        "createdBy": StringAttribute, //	Unique identifier of the user who created the record.	higherEducation/GrantApplicationBusinessProcessFlow
-        "createdOn": StringAttribute, //	Date and time when the record was created.	higherEducation/GrantApplicationBusinessProcessFlow
         "createdOnBehalfBy": StringAttribute, //	Unique identifier of the delegate user who created the record.	higherEducation/GrantApplicationBusinessProcessFlow
         "importSequenceNumber": StringAttribute, //	Sequence number of the import that created this record.	higherEducation/GrantApplicationBusinessProcessFlow
-        "modifiedBy": StringAttribute, //	Unique identifier of the user who modified the record.	higherEducation/GrantApplicationBusinessProcessFlow
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	higherEducation/GrantApplicationBusinessProcessFlow
         "modifiedOnBehalfBy": StringAttribute, //	Unique identifier of the delegate user who modified the record.	higherEducation/GrantApplicationBusinessProcessFlow
         "organizationId": StringAttribute, //	Unique identifier for the organization	higherEducation/GrantApplicationBusinessProcessFlow
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/GrantApplicationBusinessProcessFlow

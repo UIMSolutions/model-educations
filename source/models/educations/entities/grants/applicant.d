@@ -12,10 +12,6 @@ class DGrantApplicantEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOn": StringAttribute, //	Date and time when the record was created.	higherEducation/GrantApplicant
-        "createdBy": StringAttribute, //	Shows who created the record.	higherEducation/GrantApplicant
-        "modifiedOn": StringAttribute, //	Date and time when the record was modified.	higherEducation/GrantApplicant
-        "modifiedBy": StringAttribute, //	Shows who last updated the record.	higherEducation/GrantApplicant
         "createdOnBehalfBy": StringAttribute, //	Shows who created the record on behalf of another user.	higherEducation/GrantApplicant
         "modifiedOnBehalfBy": StringAttribute, //	Shows who last updated the record on behalf of another user.	higherEducation/GrantApplicant
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	higherEducation/GrantApplicant
