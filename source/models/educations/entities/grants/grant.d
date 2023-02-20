@@ -8,7 +8,7 @@ import models.educations;
 class DGrantEntity : DOOPEntity {
   mixin(EntityThis!("GrantEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

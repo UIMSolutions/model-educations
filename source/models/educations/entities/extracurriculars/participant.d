@@ -8,7 +8,7 @@ import models.educations;
 class DExtraCurricularParticipantEntity : DOOPEntity {
   mixin(EntityThis!("ExtraCurricularParticipantEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

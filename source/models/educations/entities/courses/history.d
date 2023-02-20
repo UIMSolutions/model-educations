@@ -8,7 +8,7 @@ import models.educations;
 class DCourseHistoryEntity : DOOPEntity {
   mixin(EntityThis!("CourseHistoryEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

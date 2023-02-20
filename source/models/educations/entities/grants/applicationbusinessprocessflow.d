@@ -7,7 +7,7 @@ import models.educations;
 class DGrantApplicationBusinessProcessFlowEntity : DOOPEntity {
   mixin(EntityThis!("GrantApplicationBusinessProcessFlowEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
