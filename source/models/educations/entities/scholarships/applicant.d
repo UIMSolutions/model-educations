@@ -9,7 +9,7 @@ class DScholarshipApplicantEntity : DOOPEntity {
   mixin(EntityThis!("ScholarshipApplicantEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -29,19 +29,19 @@ class DScholarshipApplicantEntity : DOOPEntity {
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.
         "versionNumber": StringAttribute, //	Version Number
-        "scholarshipApplicantId": StringAttribute, //	Unique identifier for entity instances
-        "applicantId": StringAttribute, //	Scholarship applicant
+        "scholarshipApplicantId": UUIDAttribute, //	Unique identifier for entity instances
+        "applicantId": UUIDAttribute, //	Scholarship applicant
         "applicationStateCode": StringAttribute, //	
         "applicationStateCode_display": StringAttribute, //	
-        "businessPartnerId": StringAttribute, //	Partner offering scholarship
+        "businessPartnerId": UUIDAttribute, //	Partner offering scholarship
         "offerAcceptedDate": StringAttribute, //	Date the offer was accepted
         "offerDeadlineDate": StringAttribute, //	Deadline to accept the offer
         "offerMadeDate": StringAttribute, //	Date the offer was made
         "qualificationDescription": StringAttribute, //	Description about why an applicant should be selected for the scholarship
-        "scholarshipId": StringAttribute, //	Scholarship Applied for
+        "scholarshipId": UUIDAttribute, //	Scholarship Applied for
         "submissionDate": StringAttribute, //	Date the application was submitted
-        "processId": StringAttribute, //	Contains the id of the process associated with the entity.
-        "deprecatedStageId": StringAttribute, //	Contains the id of the stage where the entity is located.
+        "processId": UUIDAttribute, //	Contains the id of the process associated with the entity.
+        "deprecatedStageId": UUIDAttribute, //	Contains the id of the stage where the entity is located.
         "deprecatedTraversedPath": StringAttribute, //	A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.
       ])
       .registerPath("education_scholarships.applicants");

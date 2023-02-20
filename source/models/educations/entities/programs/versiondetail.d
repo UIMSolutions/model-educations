@@ -8,7 +8,7 @@ class DProgramVersionDetailEntity : DOOPEntity {
   mixin(EntityThis!("ProgramVersionDetailEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -27,7 +27,7 @@ class DProgramVersionDetailEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.
-        "programVersionDetailId": StringAttribute, //	Unique identifier for entity instances
+        "programVersionDetailId": UUIDAttribute, //	Unique identifier for entity instances
         "code": StringAttribute, //	Registration code.
         "expectedGraduationDate": StringAttribute, //	The expected graduation date for the program version start date instance.
         "externalIdentifier": StringAttribute, //	External Identifier
@@ -35,7 +35,7 @@ class DProgramVersionDetailEntity : DOOPEntity {
         "externalSourceSystem_display": StringAttribute, //	
         "midpointDate": StringAttribute, //	Midpoint Date
         "mustGraduateBefore": StringAttribute, //	Must Graduate Before
-        "programVersionId": StringAttribute, //	Lookup to the program version.
+        "programVersionId": UUIDAttribute, //	Lookup to the program version.
         "startDate": StringAttribute, //	Start Date
       ])
       .registerPath("education_program.version.details");

@@ -8,7 +8,7 @@ class DInternshipEntity : DOOPEntity {
   mixin(EntityThis!("InternshipEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,10 +28,10 @@ class DInternshipEntity : DOOPEntity {
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
         "versionNumber": StringAttribute, //	Version Number	
-        "internshipId": StringAttribute, //	Unique identifier for entity instances	
+        "internshipId": UUIDAttribute, //	Unique identifier for entity instances	
         "applicationDeadlineDate": StringAttribute, //	Last date to apply for internship	
-        "businessPartnerId": StringAttribute, //	Business Partner	
-        "businessPartnerContactId": StringAttribute, //	Internship point of contact	
+        "businessPartnerId": UUIDAttribute, //	Business Partner	
+        "businessPartnerContactId": UUIDAttribute, //	Internship point of contact	
         "description": StringAttribute, //	Description about the internship	
         "isPaid": StringAttribute, //	Is the internship paid/unpaid	
         "locationDescription": StringAttribute, //	Location where work is performed	

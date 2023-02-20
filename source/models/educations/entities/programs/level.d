@@ -8,7 +8,7 @@ class DProgramLevelEntity : DOOPEntity {
   mixin(EntityThis!("ProgramLevelEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,7 +28,7 @@ class DProgramLevelEntity : DOOPEntity {
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
         "versionNumber": StringAttribute, //	Version Number	
-        "programLevelId": StringAttribute, //	Unique identifier for entity instances	
+        "programLevelId": UUIDAttribute, //	Unique identifier for entity instances	
         "name": StringAttribute, //	Program Level Name	
         "code": StringAttribute, //	Program Level Code	
         "externalIdentifier": StringAttribute, //	External Identifier	
