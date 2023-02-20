@@ -43,8 +43,7 @@ class DProgramVersionEntity : DOOPEntity {
 mixin(EntityCalls!("ProgramVersionEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(ProgramVersionEntity);
 
     auto entity = ProgramVersionEntity;

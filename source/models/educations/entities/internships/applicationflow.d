@@ -37,8 +37,7 @@ class DInternshipApplicationFlowEntity : DOOPEntity {
 mixin(EntityCalls!("InternshipApplicationFlowEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(InternshipApplicationFlowEntity);
 
     auto entity = InternshipApplicationFlowEntity;

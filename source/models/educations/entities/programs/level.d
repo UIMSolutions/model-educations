@@ -41,8 +41,7 @@ class DProgramLevelEntity : DOOPEntity {
 mixin(EntityCalls!("ProgramLevelEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(ProgramLevelEntity);
 
     auto entity = ProgramLevelEntity;
