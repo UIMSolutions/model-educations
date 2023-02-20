@@ -7,7 +7,7 @@ import models.educations;
 class DProgramVersionEntity : DOOPEntity {
   mixin(EntityThis!("ProgramVersionEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
