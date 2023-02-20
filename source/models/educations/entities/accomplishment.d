@@ -7,7 +7,7 @@ import models.educations;
 class DAccomplishmentEntity : DOOPEntity {
   mixin(EntityThis!("AccomplishmentEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

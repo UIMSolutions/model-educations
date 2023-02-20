@@ -8,7 +8,7 @@ import models.educations;
 class DAcademicPeriodEntity : DOOPEntity {
   mixin(EntityThis!("AcademicPeriodEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

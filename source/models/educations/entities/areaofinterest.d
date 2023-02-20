@@ -8,7 +8,7 @@ import models.educations;
 class DAreaOfInterestEntity : DOOPEntity {
   mixin(EntityThis!("AreaOfInterestEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

@@ -8,7 +8,7 @@ import models.educations;
 class DRegistrationStatusEntity : DOOPEntity {
   mixin(EntityThis!("RegistrationStatusEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
