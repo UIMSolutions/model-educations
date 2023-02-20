@@ -80,8 +80,7 @@ class DTestScoreEntity : DOOPEntity {
 mixin(EntityCalls!("TestScoreEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(TestScoreEntity);
 
     auto entity = TestScoreEntity;
