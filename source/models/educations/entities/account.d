@@ -200,8 +200,7 @@ class DAccountEntity : DOOPEntity {
 mixin(EntityCalls!("AccountEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(AccountEntity);
 
     auto entity = AccountEntity;

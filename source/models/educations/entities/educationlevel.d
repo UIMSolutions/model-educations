@@ -38,8 +38,7 @@ class DEducationLevelEntity : DOOPEntity {
 }
 mixin(EntityCalls!("EducationLevelEntity"));
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(EducationLevelEntity);
 
     auto entity = EducationLevelEntity;

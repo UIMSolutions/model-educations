@@ -74,8 +74,7 @@ class DAddressEntity : DOOPEntity {
 mixin(EntityCalls!("AddressEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(AddressEntity);
 
     auto entity = AddressEntity;

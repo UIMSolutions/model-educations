@@ -39,8 +39,7 @@ class DRegistrationStatusEntity : DOOPEntity {
 }
 mixin(EntityCalls!("RegistrationStatusEntity"));
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(RegistrationStatusEntity);
 
     auto entity = RegistrationStatusEntity;

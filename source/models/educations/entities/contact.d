@@ -257,8 +257,7 @@ class DContactEntity : DOOPEntity {
 mixin(EntityCalls!("ContactEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(ContactEntity);
 
     auto entity = ContactEntity;

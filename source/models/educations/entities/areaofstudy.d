@@ -43,8 +43,7 @@ class DAreaOfStudyEntity : DOOPEntity {
 mixin(EntityCalls!("AreaOfStudyEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(AreaOfStudyEntity);
 
     auto entity = AreaOfStudyEntity;
