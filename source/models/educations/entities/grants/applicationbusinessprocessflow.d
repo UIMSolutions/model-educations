@@ -37,8 +37,7 @@ class DGrantApplicationBusinessProcessFlowEntity : DOOPEntity {
 mixin(EntityCalls!("GrantApplicationBusinessProcessFlowEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(GrantApplicationBusinessProcessFlowEntity);
 
     auto entity = GrantApplicationBusinessProcessFlowEntity;

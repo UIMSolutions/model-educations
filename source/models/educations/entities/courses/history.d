@@ -50,8 +50,7 @@ class DCourseHistoryEntity : DOOPEntity {
 mixin(EntityCalls!("CourseHistoryEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(CourseHistoryEntity);
 
     auto entity = CourseHistoryEntity;

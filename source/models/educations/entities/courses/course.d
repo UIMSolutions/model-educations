@@ -47,8 +47,7 @@ class DCourseEntity : DOOPEntity {
 mixin(EntityCalls!("CourseEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(CourseEntity);
 
     auto entity = CourseEntity;

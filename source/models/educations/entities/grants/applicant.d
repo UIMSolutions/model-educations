@@ -48,8 +48,7 @@ class DGrantApplicantEntity : DOOPEntity {
 mixin(EntityCalls!("GrantApplicantEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(GrantApplicantEntity);
 
     auto entity = GrantApplicantEntity;

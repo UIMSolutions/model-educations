@@ -46,8 +46,7 @@ class DExtraCurricularParticipantEntity : DOOPEntity {
 mixin(EntityCalls!("ExtraCurricularParticipantEntity"));
 
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(ExtraCurricularParticipantEntity);
 
     auto entity = ExtraCurricularParticipantEntity;

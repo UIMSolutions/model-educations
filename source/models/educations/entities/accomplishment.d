@@ -38,8 +38,7 @@ class DAccomplishmentEntity : DOOPEntity {
 }
 mixin(EntityCalls!("AccomplishmentEntity"));
 
-version(test_model_education) {
-  unittest {
+version(test_model_education) { unittest {
     assert(AccomplishmentEntity);
 
     auto entity = AccomplishmentEntity;
