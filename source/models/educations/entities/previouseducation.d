@@ -8,7 +8,7 @@ class DPreviousEducationEntity : DOOPEntity {
   mixin(EntityThis!("PreviousEducationEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -27,19 +27,19 @@ class DPreviousEducationEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "previousEducationId": StringAttribute, //	Unique identifier for entity instances	
+        "previousEducationId": UUIDAttribute, //	Unique identifier for entity instances	
         "classSize": StringAttribute, //	Class Size	
         "dateofEnrollment": StringAttribute, //	Date of Enrollment	
-        "degreeId": StringAttribute, //	Lookup to Program Level	
-        "educationLevelId": StringAttribute, //	The education level for the student.	
+        "degreeId": UUIDAttribute, //	Lookup to Program Level	
+        "educationLevelId": UUIDAttribute, //	The education level for the student.	
         "GPA": StringAttribute, //	GPA	
         "graduated": StringAttribute, //	Did the contact graduate?	
         "graduationDate": StringAttribute, //	The graduation date for the student.	
         "lastDateofAttendance": StringAttribute, //	Last Date of Attendance	
         "major": StringAttribute, //	Major	
         "rank": StringAttribute, //	Rank within the graduating class	
-        "schoolNameId": StringAttribute, //	The school previously attended	
-        "studentId": StringAttribute, //		
+        "schoolNameId": UUIDAttribute, //	The school previously attended	
+        "studentId": UUIDAttribute, //		
       ])
       .registerPath("education_previous.educations");
   }

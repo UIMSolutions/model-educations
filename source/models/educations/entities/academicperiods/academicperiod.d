@@ -9,7 +9,7 @@ class DAcademicPeriodEntity : DOOPEntity {
   mixin(EntityThis!("AcademicPeriodEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,7 +28,7 @@ class DAcademicPeriodEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "academicPeriodId": StringAttribute, //	Unique identifier for entity instances	
+        "academicPeriodId": UUIDAttribute, //	Unique identifier for entity instances	
         "code": StringAttribute, //	Abbreviated code for the academic period.	
         "endDate": StringAttribute, //		
         "externalIdentifier": StringAttribute, //	External Identifier	

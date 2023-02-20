@@ -8,7 +8,7 @@ class DEducationLevelEntity : DOOPEntity {
   mixin(EntityThis!("EducationLevelEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -27,7 +27,7 @@ class DEducationLevelEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "educationLevelId": StringAttribute, //	Unique identifier for entity instances	
+        "educationLevelId": UUIDAttribute, //	Unique identifier for entity instances	
         "code": StringAttribute, //	Education Level Code	
         "externalIdentifier": StringAttribute, //	External Identifier	
         "externalSourceSystem": StringAttribute, //	External Source System	

@@ -8,7 +8,7 @@ class DContactEntity : DOOPEntity {
   mixin(EntityThis!("ContactEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -27,7 +27,7 @@ class DContactEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "contactId": StringAttribute, //	Unique identifier of the contact.	
+        "contactId": UUIDAttribute, //	Unique identifier of the contact.	
         "customerSizeCode": StringAttribute, //	Select the size of the contact's company for segmentation and reporting purposes.	
         "customerSizeCode_display": StringAttribute, //		
         "customerTypeCode": StringAttribute, //	Select the category that best describes the relationship between the contact and your organization.	
@@ -40,7 +40,7 @@ class DContactEntity : DOOPEntity {
         "paymentTermsCode_display": StringAttribute, //		
         "shippingMethodCode": StringAttribute, //	Select a shipping method for deliveries sent to this address.	
         "shippingMethodCode_display": StringAttribute, //		
-        "accountId": StringAttribute, //	Unique identifier of the account with which the contact is associated.	
+        "accountId": UUIDAttribute, //	Unique identifier of the account with which the contact is associated.	
         "participatesInWorkflow": StringAttribute, //	Shows whether the contact participates in workflow rules.	
         "isBackofficeCustomer": StringAttribute, //	Select whether the contact exists in a separate accounting or other system, such as Microsoft Dynamics GP or another ERP database, for use in integration processes.	
         "salutation": StringAttribute, //	Type the salutation of the contact to make sure the contact is addressed correctly in sales calls, email messages, and marketing campaigns.	
@@ -57,10 +57,10 @@ class DContactEntity : DOOPEntity {
         "yomiLastName": StringAttribute, //	Type the phonetic spelling of the contact's last name, if the name is specified in Japanese, to make sure the name is pronounced correctly in phone calls with the contact.	
         "anniversary": StringAttribute, //	Enter the date of the contact's wedding or service anniversary for use in customer gift programs or other communications.	
         "birthDate": StringAttribute, //	Enter the contact's birthday for use in customer gift programs or other communications.	
-        "governmentId": StringAttribute, //	Type the passport number or other government ID for the contact for use in documents or reports.	
+        "governmentId": UUIDAttribute, //	Type the passport number or other government ID for the contact for use in documents or reports.	
         "yomiFullName": StringAttribute, //	Shows the combined Yomi first and last names of the contact so that the full phonetic name can be displayed in views and reports.	
         "description": StringAttribute, //	Type additional information to describe the contact, such as an excerpt from the company's website.	
-        "employeeId": StringAttribute, //	Type the employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organization.	
+        "employeeId": UUIDAttribute, //	Type the employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organization.	
         "genderCode": StringAttribute, //	Select the contact's gender to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.	
         "genderCode_display": StringAttribute, //		
         "annualIncome": StringAttribute, //	Type the contact's annual income for use in profiling and financial analysis.	
@@ -103,8 +103,8 @@ class DContactEntity : DOOPEntity {
         "aging30": StringAttribute, //	For system use only.	
         "aging60": StringAttribute, //	For system use only.	
         "aging90": StringAttribute, //	For system use only.	
-        "parentContactId": StringAttribute, //	Unique identifier of the parent contact.	
-        "address1AddressId": StringAttribute, //	Unique identifier for address n.	
+        "parentContactId": UUIDAttribute, //	Unique identifier of the parent contact.	
+        "address1AddressId": UUIDAttribute, //	Unique identifier for address n.	
         "address1AddressTypeCode": StringAttribute, //	Select the address type, such as primary or billing.	
         "address1AddressTypeCode_display": StringAttribute, //		
         "address1Name": StringAttribute, //	Type a descriptive name for the customer's address, such as Corporate Headquarters.	
@@ -131,7 +131,7 @@ class DContactEntity : DOOPEntity {
         "address1Telephone3": StringAttribute, //	Type a third phone number for the customer's address.	
         "address1Fax": StringAttribute, //	Type the fax number associated with the customer's address.	
         "address1Composite": StringAttribute, //	Shows the complete address.	
-        "address2AddressId": StringAttribute, //	Unique identifier for address n.	
+        "address2AddressId": UUIDAttribute, //	Unique identifier for address n.	
         "address2AddressTypeCode": StringAttribute, //	Select the address type, such as primary or billing.	
         "address2AddressTypeCode_display": StringAttribute, //		
         "address2Name": StringAttribute, //	Type a descriptive name for the customer's address, such as Corporate Headquarters.	
@@ -158,7 +158,7 @@ class DContactEntity : DOOPEntity {
         "address2Telephone3": StringAttribute, //	Type a third phone number for the customer's address.	
         "address2Fax": StringAttribute, //	Type the fax number associated with the customer's address.	
         "address2Composite": StringAttribute, //	Shows the complete address.	
-        "address3AddressId": StringAttribute, //	Unique identifier for address n.	
+        "address3AddressId": UUIDAttribute, //	Unique identifier for address n.	
         "address3AddressTypeCode": StringAttribute, //	Select the address type, such as primary or billing.	
         "address3AddressTypeCode_display": StringAttribute, //		
         "address3Name": StringAttribute, //	Type a descriptive name for the customer's address, such as Corporate Headquarters.	
@@ -185,31 +185,31 @@ class DContactEntity : DOOPEntity {
         "address3Telephone3": StringAttribute, //	Type a third phone number for the customer's address.	
         "address3Fax": StringAttribute, //	Type the fax number associated with the customer's address.	
         "address3Composite": StringAttribute, //	Shows the complete address.	
-        "preferredSystemUserId": StringAttribute, //	Choose the regular or preferred customer service representative for reference when scheduling service activities for the contact.	
-        "masterId": StringAttribute, //	Unique identifier of the master contact for merge.	
+        "preferredSystemUserId": UUIDAttribute, //	Choose the regular or preferred customer service representative for reference when scheduling service activities for the contact.	
+        "masterId": UUIDAttribute, //	Unique identifier of the master contact for merge.	
         "preferredAppointmentDayCode": StringAttribute, //	Select the preferred day of the week for service appointments.	
         "preferredAppointmentDayCode_display": StringAttribute, //		
         "preferredAppointmentTimeCode": StringAttribute, //	Select the preferred time of day for service appointments.	
         "preferredAppointmentTimeCode_display": StringAttribute, //		
         "doNotSendMM": StringAttribute, //	Select whether the contact accepts marketing materials, such as brochures or catalogs. Contacts that opt out can be excluded from marketing initiatives.	
-        "parentCustomerId": StringAttribute, //	Select the parent account or parent contact for the contact to provide a quick link to additional details, such as financial information, activities, and opportunities.	
+        "parentCustomerId": UUIDAttribute, //	Select the parent account or parent contact for the contact to provide a quick link to additional details, such as financial information, activities, and opportunities.	
         "parentCustomerIdType": StringAttribute, //	The type of parent customer, either Account or Contact.	
         "merged": StringAttribute, //	Shows whether the account has been merged with a master contact.	
         "externalUserIdentifier": StringAttribute, //	Identifier for an external user.	
         "lastUsedInCampaign": StringAttribute, //	Shows the date when the contact was last included in a marketing campaign or quick campaign.	
-        "transactionCurrencyId": StringAttribute, //	Choose the local currency for the record to make sure budgets are reported in the correct currency.	
+        "transactionCurrencyId": UUIDAttribute, //	Choose the local currency for the record to make sure budgets are reported in the correct currency.	
         "exchangeRate": StringAttribute, //	Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.	
         "annualIncomeBase": StringAttribute, //	Shows the Annual Income field converted to the system's default base currency. The calculations use the exchange rate specified in the Currencies area.	
         "creditLimitBase": StringAttribute, //	Shows the Credit Limit field converted to the system's default base currency for reporting purposes. The calculations use the exchange rate specified in the Currencies area.	
         "aging60Base": StringAttribute, //	Shows the Aging 60 field converted to the system's default base currency. The calculations use the exchange rate specified in the Currencies area.	
         "aging90Base": StringAttribute, //	Shows the Aging 90 field converted to the system's default base currency. The calculations use the exchange rate specified in the Currencies area.	
         "aging30Base": StringAttribute, //	Shows the Aging 30 field converted to the system's default base currency. The calculations use the exchange rate specified in the Currencies area.	
-        "stageId": StringAttribute, //	Shows the ID of the stage.	
-        "processId": StringAttribute, //	Shows the ID of the process.	
-        "entityImageId": StringAttribute, //	For internal use only.	
+        "stageId": UUIDAttribute, //	Shows the ID of the stage.	
+        "processId": UUIDAttribute, //	Shows the ID of the process.	
+        "entityImageId": UUIDAttribute, //	For internal use only.	
         "traversedPath": StringAttribute, //	For internal use only.	
-        "SLAId": StringAttribute, //	Choose the service level agreement (SLA) that you want to apply to the Contact record.	
-        "SLAInvokedId": StringAttribute, //	Last SLA that was applied to this case. This field is for internal use only.	
+        "SLAId": UUIDAttribute, //	Choose the service level agreement (SLA) that you want to apply to the Contact record.	
+        "SLAInvokedId": UUIDAttribute, //	Last SLA that was applied to this case. This field is for internal use only.	
         "onHoldTime": StringAttribute, //	Shows how long, in minutes, that the record was on hold.	
         "lastOnHoldTime": StringAttribute, //	Contains the date and time stamp of the last on hold time.	
         "followEmail": StringAttribute, //	Information about whether to allow following email activity like opens, attachment views and link clicks for emails sent to the contact.	
@@ -225,9 +225,9 @@ class DContactEntity : DOOPEntity {
         "contactType_display": StringAttribute, //		
         "countryofBirth": StringAttribute, //	Country of birth for the contact.	
         "countryofBirth_display": StringAttribute, //		
-        "currentAcademicPeriodId": StringAttribute, //	Current academic period enrolled, if any, for the contact.	
-        "currentProgramId": StringAttribute, //	Current program for the contact.	
-        "currentProgramLevelId": StringAttribute, //	Current program level associated to the program for the contact.	
+        "currentAcademicPeriodId": UUIDAttribute, //	Current academic period enrolled, if any, for the contact.	
+        "currentProgramId": UUIDAttribute, //	Current program for the contact.	
+        "currentProgramLevelId": UUIDAttribute, //	Current program level associated to the program for the contact.	
         "ethnicGroup": StringAttribute, //	Ethnic group for the contact.	
         "ethnicGroup_display": StringAttribute, //		
         "externalIdentifier": StringAttribute, //	External Identifier	
@@ -249,7 +249,7 @@ class DContactEntity : DOOPEntity {
         "nationality_display": StringAttribute, //		
         "race": StringAttribute, //	Race of the contact	
         "race_display": StringAttribute, //		
-        "studentStatusId": StringAttribute, //		
+        "studentStatusId": UUIDAttribute, //		
       ])
       .registerPath("education_contacts");
   }

@@ -9,7 +9,7 @@ class DAccountEntity : DOOPEntity {
   mixin(EntityThis!("AccountEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,7 +28,7 @@ class DAccountEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "accountId": StringAttribute, //	Unique identifier of the account.	
+        "accountId": UUIDAttribute, //	Unique identifier of the account.	
         "accountCategoryCode": StringAttribute, //	Select a category to indicate whether the customer account is standard or preferred.	
         "accountCategoryCode_display": StringAttribute, //		
         "customerSizeCode": StringAttribute, //	Select the size category or range of the account for segmentation and reporting purposes.	
@@ -52,7 +52,7 @@ class DAccountEntity : DOOPEntity {
         "paymentTermsCode_display": StringAttribute, //		
         "shippingMethodCode": StringAttribute, //	Select a shipping method for deliveries sent to the account's address to designate the preferred carrier or other delivery option.	
         "shippingMethodCode_display": StringAttribute, //		
-        "primaryContactId": StringAttribute, //	Choose the primary contact for the account to provide quick access to contact details.	
+        "primaryContactId": UUIDAttribute, //	Choose the primary contact for the account to provide quick access to contact details.	
         "participatesInWorkflow": StringAttribute, //	For system use only. Legacy Microsoft Dynamics CRM 3.0 workflow data.	
         "accountNumber": StringAttribute, //	Type an ID number or code for the account to quickly search and identify the account in system views.	
         "revenue": StringAttribute, //	Type the annual revenue for the account, used as an indicator in financial performance analysis.	
@@ -82,11 +82,11 @@ class DAccountEntity : DOOPEntity {
         "doNotBulkPostalMail": StringAttribute, //	Select whether the account allows bulk postal mail sent through marketing campaigns or quick campaigns. If Do Not Allow is selected, the account can be added to marketing lists, but will be excluded from the postal mail.	
         "creditLimit": StringAttribute, //	Type the credit limit of the account. This is a useful reference when you address invoice and accounting issues with the customer.	
         "creditOnHold": StringAttribute, //	Select whether the credit for the account is on hold. This is a useful reference while addressing the invoice and accounting issues with the customer.	
-        "parentAccountId": StringAttribute, //	Choose the parent account associated with this account to show parent and child businesses in reporting and analytics.	
+        "parentAccountId": UUIDAttribute, //	Choose the parent account associated with this account to show parent and child businesses in reporting and analytics.	
         "aging30": StringAttribute, //	For system use only.	
         "aging60": StringAttribute, //	For system use only.	
         "aging90": StringAttribute, //	For system use only.	
-        "address1AddressId": StringAttribute, //	Unique identifier for address 1.	
+        "address1AddressId": UUIDAttribute, //	Unique identifier for address 1.	
         "address1AddressTypeCode": StringAttribute, //	Select the address type, such as primary or billing.	
         "address1AddressTypeCode_display": StringAttribute, //		
         "address1Name": StringAttribute, //	Type a descriptive name for the customer's address, such as Corporate Headquarters.	
@@ -120,7 +120,7 @@ class DAccountEntity : DOOPEntity {
         "address1MailType": StringAttribute, //	Indicate address as Primary or Seasonal	
         "address1MailType_display": StringAttribute, //		
         "address1StartDate": StringAttribute, //	Start Date	
-        "address2AddressId": StringAttribute, //	Unique identifier for address 1.	
+        "address2AddressId": UUIDAttribute, //	Unique identifier for address 1.	
         "address2AddressTypeCode": StringAttribute, //	Select the address type, such as primary or billing.	
         "address2AddressTypeCode_display": StringAttribute, //		
         "address2Name": StringAttribute, //	Type a descriptive name for the customer's address, such as Corporate Headquarters.	
@@ -156,15 +156,15 @@ class DAccountEntity : DOOPEntity {
         "address2StartDate": StringAttribute, //	Start Date	
         "preferredAppointmentDayCode": StringAttribute, //	Select the preferred day of the week for service appointments.	
         "preferredAppointmentDayCode_display": StringAttribute, //		
-        "preferredSystemUserId": StringAttribute, //	Choose the preferred service representative for reference when you schedule service activities for the account.	
+        "preferredSystemUserId": UUIDAttribute, //	Choose the preferred service representative for reference when you schedule service activities for the account.	
         "preferredAppointmentTimeCode": StringAttribute, //	Select the preferred time of day for service appointments.	
         "preferredAppointmentTimeCode_display": StringAttribute, //		
         "merged": StringAttribute, //	Shows whether the account has been merged with another account.	
         "doNotSendMM": StringAttribute, //	Select whether the account accepts marketing materials, such as brochures or catalogs.	
-        "masterId": StringAttribute, //	Shows the master account that the account was merged with.	
+        "masterId": UUIDAttribute, //	Shows the master account that the account was merged with.	
         "lastUsedInCampaign": StringAttribute, //	Shows the date when the account was last included in a marketing campaign or quick campaign.	
         "exchangeRate": StringAttribute, //	Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.	
-        "transactionCurrencyId": StringAttribute, //	Choose the local currency for the record to make sure budgets are reported in the correct currency.	
+        "transactionCurrencyId": UUIDAttribute, //	Choose the local currency for the record to make sure budgets are reported in the correct currency.	
         "creditLimitBase": StringAttribute, //	Shows the credit limit converted to the system's default base currency for reporting purposes.	
         "aging30Base": StringAttribute, //	The base currency equivalent of the aging 30 field.	
         "revenueBase": StringAttribute, //	Shows the annual revenue converted to the system's default base currency. The calculations use the exchange rate specified in the Currencies area.	
@@ -172,16 +172,16 @@ class DAccountEntity : DOOPEntity {
         "marketCapBase": StringAttribute, //	Shows the market capitalization converted to the system's default base currency.	
         "aging60Base": StringAttribute, //	The base currency equivalent of the aging 60 field.	
         "yomiName": StringAttribute, //	Type the phonetic spelling of the company name, if specified in Japanese, to make sure the name is pronounced correctly in phone calls and other communications.	
-        "stageId": StringAttribute, //	Shows the ID of the stage.	
-        "processId": StringAttribute, //	Shows the ID of the process.	
-        "entityImageId": StringAttribute, //	For internal use only.	
+        "stageId": UUIDAttribute, //	Shows the ID of the stage.	
+        "processId": UUIDAttribute, //	Shows the ID of the process.	
+        "entityImageId": UUIDAttribute, //	For internal use only.	
         "timeSpentByMeOnEmailAndMeetings": StringAttribute, //	Total time spent for emails (read and write) and meetings by me in relation to account record.	
         "createdByExternalParty": StringAttribute, //	Shows the external party who created the record.	
         "modifiedByExternalParty": StringAttribute, //	Shows the external party who modified the record.	
-        "primarySatoriId": StringAttribute, //	Primary Satori ID for Account	
-        "primaryTwitterId": StringAttribute, //	Primary Twitter ID for Account	
-        "SLAId": StringAttribute, //	Choose the service level agreement (SLA) that you want to apply to the Account record.	
-        "SLAInvokedId": StringAttribute, //	Last SLA that was applied to this case. This field is for internal use only.	
+        "primarySatoriId": UUIDAttribute, //	Primary Satori ID for Account	
+        "primaryTwitterId": UUIDAttribute, //	Primary Twitter ID for Account	
+        "SLAId": UUIDAttribute, //	Choose the service level agreement (SLA) that you want to apply to the Account record.	
+        "SLAInvokedId": UUIDAttribute, //	Last SLA that was applied to this case. This field is for internal use only.	
         "onHoldTime": StringAttribute, //	Shows how long, in minutes, that the record was on hold.	
         "lastOnHoldTime": StringAttribute, //	Contains the date and time stamp of the last on hold time.	
         "followEmail": StringAttribute, //	Information about whether to allow following email activity like opens, attachment views and link clicks for emails sent to the account.	

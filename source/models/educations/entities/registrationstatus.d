@@ -9,7 +9,7 @@ class DRegistrationStatusEntity : DOOPEntity {
   mixin(EntityThis!("RegistrationStatusEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,7 +28,7 @@ class DRegistrationStatusEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "registrationStatusId": StringAttribute, //	Unique identifier for entity instances	
+        "registrationStatusId": UUIDAttribute, //	Unique identifier for entity instances	
         "code": StringAttribute, //		
         "externalIdentifier": StringAttribute, //	External Identifier	
         "externalSourceSystem": StringAttribute, //	External Source System	

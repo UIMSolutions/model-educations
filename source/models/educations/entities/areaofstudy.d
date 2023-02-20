@@ -9,7 +9,7 @@ class DAreaOfStudyEntity : DOOPEntity {
   mixin(EntityThis!("AreaOfStudyEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,13 +28,13 @@ class DAreaOfStudyEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "areaOfStudyId": StringAttribute, //	Unique identifier for entity instances	
+        "areaOfStudyId": UUIDAttribute, //	Unique identifier for entity instances	
         "code": StringAttribute, //	Abbreviated code for the area of study.	
         "externalIdentifier": StringAttribute, //	External Identifier	
         "externalSourceSystem": StringAttribute, //	External Source System	
         "externalSourceSystem_display": StringAttribute, //		
         "minimumRequiredGPA": StringAttribute, //	Minimum Required GPA	
-        "programTypeId": StringAttribute, //	The program type for the area of study, such as major or concentration.	
+        "programTypeId": UUIDAttribute, //	The program type for the area of study, such as major or concentration.	
         "requiredCredits": StringAttribute, //	The number of credits required to be completed by a student pursuing the area of study.	
       ])
       .registerPath("education_areaofstudies");
