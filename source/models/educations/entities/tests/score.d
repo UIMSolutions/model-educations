@@ -8,7 +8,7 @@ class DTestScoreEntity : DOOPEntity {
   mixin(EntityThis!("TestScoreEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -21,14 +21,14 @@ class DTestScoreEntity : DOOPEntity {
       .addValues([ // individual values  
         "overriddenCreatedOn": StringAttribute, //	Date and time that the record was migrated.	
         "importSequenceNumber": StringAttribute, //	Unique identifier of the data import or data migration that created this record.	
-        "ownerId": StringAttribute, //	Owner Id	
+        "ownerId": UUIDAttribute, //	Owner Id	
         "ownerIdType": StringAttribute, //	The type of owner, either User or Team.	
         "owningBusinessUnit": StringAttribute, //	Unique identifier for the business unit that owns the record	
         "owningUser": StringAttribute, //	Unique identifier of the user that owns the activity.	
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "testScoreId": StringAttribute, //	Unique identifier for entity instances	
+        "testScoreId": UUIDAttribute, //	Unique identifier for entity instances	
         "actComposite": StringAttribute, //	ACT - Composite Score	
         "actELA": StringAttribute, //	ACT - ELA Score	
         "actEnglish": StringAttribute, //	ACT - English Score	
@@ -67,7 +67,7 @@ class DTestScoreEntity : DOOPEntity {
         "testScoreValue": StringAttribute, //	Test Score Value	
         "testSource": StringAttribute, //	Source of Test score	
         "testSource_display": StringAttribute, //		
-        "testTypeId": StringAttribute, //	List of test types	
+        "testTypeId": UUIDAttribute, //	List of test types	
         "toeflListeningSection": StringAttribute, //	TOEFL - Listening Section Score	
         "toeflReadingSection": StringAttribute, //	TOEFL - Reading Section Score	
         "toeflSpeakingSection": StringAttribute, //	TOEFL - Speaking Section Score	

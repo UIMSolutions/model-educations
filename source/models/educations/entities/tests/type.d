@@ -8,7 +8,7 @@ class DTestTypeEntity : DOOPEntity {
   mixin(EntityThis!("TestTypeEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -27,7 +27,7 @@ class DTestTypeEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.
-        "testTypeId": StringAttribute, //	Unique identifier for entity instances
+        "testTypeId": UUIDAttribute, //	Unique identifier for entity instances
       ])
       .registerPath("education_test.types");
   }
