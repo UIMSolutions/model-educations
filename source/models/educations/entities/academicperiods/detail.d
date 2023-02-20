@@ -9,7 +9,7 @@ class DAcademicPeriodDetailEntity : DOOPEntity {
   mixin(EntityThis!("AcademicPeriodDetailEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,12 +28,12 @@ class DAcademicPeriodDetailEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "academicPeriodDetailsId": StringAttribute, //	Unique identifier for entity instances	
+        "academicPeriodDetailsId": UUIDAttribute, //	Unique identifier for entity instances	
         "academicPeriodID": StringAttribute, //		
         "attendanceType": StringAttribute, //	The enrollment attendance type for the student.	
         "attendanceType_display": StringAttribute, //		
         "creditLoad": StringAttribute, //	Assigned credit load for academic period	
-        "educationLevelId": StringAttribute, //	The education level for the student.	
+        "educationLevelId": UUIDAttribute, //	The education level for the student.	
         "employedHoursPerWeek": StringAttribute, //	Employed for how many hours/week?	
         "isAthlete": StringAttribute, //	Athlete	
         "isEmployed": StringAttribute, //	Employed	
@@ -43,8 +43,8 @@ class DAcademicPeriodDetailEntity : DOOPEntity {
         "majorCreditEarned": StringAttribute, //	Major Credit Earned	
         "majorGPA": StringAttribute, //	Major GPA	
         "midTermDeficiency": StringAttribute, //	Mid-Term Deficiency	
-        "programId": StringAttribute, //	The program for the student.	
-        "studentId": StringAttribute, //	Lookup to Student (Contact).	
+        "programId": UUIDAttribute, //	The program for the student.	
+        "studentId": UUIDAttribute, //	Lookup to Student (Contact).	
         "termCreditsEarned": StringAttribute, //	Term Credits Earned	
         "termGPA": StringAttribute, //	Term GPA	
 

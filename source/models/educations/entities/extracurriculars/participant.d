@@ -9,7 +9,7 @@ class DExtraCurricularParticipantEntity : DOOPEntity {
   mixin(EntityThis!("ExtraCurricularParticipantEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,11 +28,11 @@ class DExtraCurricularParticipantEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "extracurricularParticipantId": StringAttribute, //	Unique identifier for entity instances	
+        "extracurricularParticipantId": UUIDAttribute, //	Unique identifier for entity instances	
         "awardsReceived": StringAttribute, //	Awards received at the Extra Curricular Activity or Club.	
-        "contactId": StringAttribute, //	Lookup to Student (Contact).	
+        "contactId": UUIDAttribute, //	Lookup to Student (Contact).	
         "endDate": StringAttribute, //	End Date	
-        "extraCurricularActivityId": StringAttribute, //	Lookup to Extra Curricular	
+        "extraCurricularActivityId": UUIDAttribute, //	Lookup to Extra Curricular	
         "positionsHeld": StringAttribute, //	Positions held at the Extra Curricular Activity or Club	
         "source": StringAttribute, //	Source of the student's extra curricular activity record.	
         "source_display": StringAttribute, //		

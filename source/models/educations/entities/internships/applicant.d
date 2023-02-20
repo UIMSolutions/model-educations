@@ -8,7 +8,7 @@ class DInternshipApplicantEntity : DOOPEntity {
   mixin(EntityThis!("InternshipApplicantEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -27,20 +27,20 @@ class DInternshipApplicantEntity : DOOPEntity {
         "owningTeam": StringAttribute, // Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, // For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created.	
-        "internshipApplicantId": StringAttribute, // Unique identifier for entity instances	
-        "applicantId": StringAttribute, // Internship applicant	
+        "internshipApplicantId": UUIDAttribute, // Unique identifier for entity instances	
+        "applicantId": UUIDAttribute, // Internship applicant	
         "applicationStateCode": StringAttribute, // Status of application	
         "applicationStateCode_display": StringAttribute, // 	
-        "businessPartnerId": StringAttribute, // Partner offering internship	
-        "internshipId": StringAttribute, // Internship being applied for	
+        "businessPartnerId": UUIDAttribute, // Partner offering internship	
+        "internshipId": UUIDAttribute, // Internship being applied for	
         "isWillingToRelocate": StringAttribute, // Is the applicant willing to relocate	
         "offerAcceptedDate": StringAttribute, // Date the offer was accepted	
         "offerDeadlineDate": StringAttribute, // Deadline to accept the offer	
         "offerMadeDate": StringAttribute, // Date the offer was made	
         "qualificationDescription": StringAttribute, // Description about why an applicant should be selected for the internship	
         "submissionDate": StringAttribute, // Date the application was submitted	
-        "processId": StringAttribute, // Contains the id of the process associated with the entity.	
-        "deprecatedStageId": StringAttribute, // Contains the id of the stage where the entity is located.	
+        "processId": UUIDAttribute, // Contains the id of the process associated with the entity.	
+        "deprecatedStageId": UUIDAttribute, // Contains the id of the stage where the entity is located.	
         "deprecatedTraversedPath": StringAttribute, // A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur.	
       ])
       .registerPath("education_internships.applicants");

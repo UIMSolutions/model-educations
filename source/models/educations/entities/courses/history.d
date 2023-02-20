@@ -9,7 +9,7 @@ class DCourseHistoryEntity : DOOPEntity {
   mixin(EntityThis!("CourseHistoryEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,12 +28,12 @@ class DCourseHistoryEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "courseHistoryId": StringAttribute, //	Unique identifier for entity instances	
-        "academicPeriodDetailsId": StringAttribute, //	The academic period details record for the student	
+        "courseHistoryId": UUIDAttribute, //	Unique identifier for entity instances	
+        "academicPeriodDetailsId": UUIDAttribute, //	The academic period details record for the student	
         "continuingEducation": StringAttribute, //	Continuing Education	
         "continuingEducation_display": StringAttribute, //		
-        "courseId": StringAttribute, //	The course record for the student.	
-        "courseSectionId": StringAttribute, //	Unique identifier for Course Section associated with Course History.	
+        "courseId": UUIDAttribute, //	The course record for the student.	
+        "courseSectionId": UUIDAttribute, //	Unique identifier for Course Section associated with Course History.	
         "creditsAttempted": StringAttribute, //	The credits attempted received.	
         "creditsEarrned": StringAttribute, //	The credits earned received.	
         "gradePoints": StringAttribute, //	The grade points received.	
@@ -41,8 +41,8 @@ class DCourseHistoryEntity : DOOPEntity {
         "letterGrade": StringAttribute, //	The letter grade received for the course.	
         "midTermLetterGrade": StringAttribute, //	The mid term letter grade received.	
         "midTermNumericGrade": StringAttribute, //	The mid term numeric grade received.	
-        "registrationStatusId": StringAttribute, //	The registration status received.	
-        "studentId": StringAttribute, //	Lookup to student (Contact)	
+        "registrationStatusId": UUIDAttribute, //	The registration status received.	
+        "studentId": UUIDAttribute, //	Lookup to student (Contact)	
       ])
       .registerPath("education_courses.histories");
   }

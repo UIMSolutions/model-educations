@@ -9,7 +9,7 @@ class DExtraCurricularActivityEntity : DOOPEntity {
   mixin(EntityThis!("ExtraCurricularActivityEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,13 +28,13 @@ class DExtraCurricularActivityEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "courseSectionId": StringAttribute, //	Unique identifier for entity instances	
+        "courseSectionId": UUIDAttribute, //	Unique identifier for entity instances	
         "name": StringAttribute, //	The name of the custom entity.	
-        "academicPeriodId": StringAttribute, //	Lookup to Academic Period.	
-        "campusId": StringAttribute, //	Campus Location of the course.	
+        "academicPeriodId": UUIDAttribute, //	Lookup to Academic Period.	
+        "campusId": UUIDAttribute, //	Campus Location of the course.	
         "courseDayTime": StringAttribute, //	Text field to store the date and time of the course.	
-        "courseId": StringAttribute, //	Lookup to Course	
-        "instructorId": StringAttribute, //	Instructor	
+        "courseId": UUIDAttribute, //	Lookup to Course	
+        "instructorId": UUIDAttribute, //	Instructor	
         "location": StringAttribute, //	Specific Meeting Location	
         "prerequisites": StringAttribute, //	Prerequisites	
       ])

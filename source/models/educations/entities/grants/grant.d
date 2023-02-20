@@ -9,7 +9,7 @@ class DGrantEntity : DOOPEntity {
   mixin(EntityThis!("GrantEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
@@ -28,22 +28,22 @@ class DGrantEntity : DOOPEntity {
         "owningTeam": StringAttribute, //	Unique identifier for the team that owns the record.	
         "timeZoneRuleVersionNumber": StringAttribute, //	For internal use only.	
         "UTCConversionTimeZoneCode": StringAttribute, //	Time zone code that was in use when the record was created.	
-        "grantId": StringAttribute, //	Unique identifier for entity instances	
+        "grantId": UUIDAttribute, //	Unique identifier for entity instances	
         "exchangeRate": StringAttribute, //	Exchange rate for the currency associated with the entity with respect to the base currency.	
         "amount": StringAttribute, //	Amount offered to perform required research	
         "amount_Base": StringAttribute, //	Value of the Amount in base currency.	
         "applicationDeadlineDate": StringAttribute, //	Last date to apply	
-        "areaOfStudyId": StringAttribute, //	Field in which grant of offered	
-        "businessPartnerId": StringAttribute, //	Business Partner unique identification number	
-        "businessPartnerContactId": StringAttribute, //	Grant point of contact	
+        "areaOfStudyId": UUIDAttribute, //	Field in which grant of offered	
+        "businessPartnerId": UUIDAttribute, //	Business Partner unique identification number	
+        "businessPartnerContactId": UUIDAttribute, //	Grant point of contact	
         "description": StringAttribute, //	Description about the Grant	
         "qualifications": StringAttribute, //	Qualifications required to be eligible for Grant	
-        "responsibleFacultyContactId": StringAttribute, //	Name of the professor guiding research	
+        "responsibleFacultyContactId": UUIDAttribute, //	Name of the professor guiding research	
         "validFrom": StringAttribute, //	Start Date of Grant	
         "validTo": StringAttribute, //	End Date of Grant	
         "websiteURL": StringAttribute, //	Grant URL	
         "workDescription": StringAttribute, //	Description of work to be performed	
-        "transactionCurrencyId": StringAttribute, //	Unique identifier of the currency associated with the entity.	
+        "transactionCurrencyId": UUIDAttribute, //	Unique identifier of the currency associated with the entity.	
       ])
       .registerPath("education_areaofstudies");
   }
