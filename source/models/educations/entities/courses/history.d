@@ -5,7 +5,7 @@ import models.educations;
 
 // The course history for a student.
 // name = Course History Entity	
-class DCourseHistoryEntity : DOOPEntity {
+class DCourseHistoryEntity : DEntity {
   mixin(EntityThis!("CourseHistoryEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

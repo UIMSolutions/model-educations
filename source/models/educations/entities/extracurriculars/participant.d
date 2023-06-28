@@ -5,7 +5,7 @@ import models.educations;
 
 // The relationship between a Contact and a specific Extra Curricular Activity.
 // name = name of the custom entity.	
-class DExtraCurricularParticipantEntity : DOOPEntity {
+class DExtraCurricularParticipantEntity : DEntity {
   mixin(EntityThis!("ExtraCurricularParticipantEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

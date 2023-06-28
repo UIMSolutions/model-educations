@@ -4,7 +4,7 @@ module models.educations.entities.grants.applicant;
 import models.educations;
 
 // This entity is used as an internship application form and to store the list of students who have applied to a particular internship.
-class DGrantApplicantEntity : DOOPEntity {
+class DGrantApplicantEntity : DEntity {
   mixin(EntityThis!("GrantApplicantEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

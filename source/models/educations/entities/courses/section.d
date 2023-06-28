@@ -5,7 +5,7 @@ import models.educations;
 
 // The relationship between an instructor and a specific course.
 // name = name of the custom entity.	
-class DCourseSectionEntity : DOOPEntity {
+class DCourseSectionEntity : DEntity {
   mixin(EntityThis!("CourseSectionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

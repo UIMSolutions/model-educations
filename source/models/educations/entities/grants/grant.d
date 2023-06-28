@@ -5,7 +5,7 @@ import models.educations;
 
 // This entity stores the list of grants offered to a school by all business partners.
 // name = Required name field	
-class DGrantEntity : DOOPEntity {
+class DGrantEntity : DEntity {
   mixin(EntityThis!("GrantEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

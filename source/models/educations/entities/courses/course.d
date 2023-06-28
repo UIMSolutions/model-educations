@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of all courses offered by an institution.
 // name = name or title of the course.	
-class DCourseEntity : DOOPEntity {
+class DCourseEntity : DEntity {
   mixin(EntityThis!("CourseEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

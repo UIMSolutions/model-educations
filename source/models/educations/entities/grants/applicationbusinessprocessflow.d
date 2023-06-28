@@ -4,7 +4,7 @@ module models.educations.entities.grants.applicationbusinessprocessflow;
 import models.educations;
 
 // Base entity for process Grant Application Business Process Flow
-class DGrantApplicationBusinessProcessFlowEntity : DOOPEntity {
+class DGrantApplicationBusinessProcessFlowEntity : DEntity {
   mixin(EntityThis!("GrantApplicationBusinessProcessFlowEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

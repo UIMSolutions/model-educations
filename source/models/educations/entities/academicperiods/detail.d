@@ -5,7 +5,7 @@ import models.educations;
 
 // Status between student and their academic periods.
 // name = name of the custom entity.	        ": StringAttribute, //
-class DAcademicPeriodDetailEntity : DOOPEntity {
+class DAcademicPeriodDetailEntity : DEntity {
   mixin(EntityThis!("AcademicPeriodDetailEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

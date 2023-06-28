@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of all extra curricular activities tracked by the institution.
 // name = name of the custom entity.	
-class DExtraCurricularActivityEntity : DOOPEntity {
+class DExtraCurricularActivityEntity : DEntity {
   mixin(EntityThis!("ExtraCurricularActivityEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
