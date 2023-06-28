@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of all area of studies offered by an institution. Areas of studies are more specific program offerings, such as Master's of Public Administration - Emergency Management.
 // name = name of the custom entity.	
-class DAreaOfStudyEntity : DOOPEntity {
+class DAreaOfStudyEntity : DEntity {
   mixin(EntityThis!("AreaOfStudyEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

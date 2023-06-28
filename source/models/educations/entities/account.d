@@ -5,7 +5,7 @@ import models.educations;
 
 // Business that represents a customer or potential customer. The company that is billed in business transactions.
 // nam = company or business name.	
-class DAccountEntity : DOOPEntity {
+class DAccountEntity : DEntity {
   mixin(EntityThis!("AccountEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

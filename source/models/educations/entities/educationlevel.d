@@ -4,7 +4,7 @@ module models.educations.entities.educationlevel;
 import models.educations;
 
 // The master list of all education levels mapped in the external system, such as Associate of Arts, Bachelor, Certificate.
-class DEducationLevelEntity : DOOPEntity {
+class DEducationLevelEntity : DEntity {
   mixin(EntityThis!("EducationLevelEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

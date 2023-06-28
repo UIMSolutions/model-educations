@@ -5,7 +5,7 @@ import models.educations;
 
 // Address and shipping information. Used to store additional addresses for an account or contact.
 // name = Descriptive name for the customer's address, such as Corporate Headquarters.
-class DAddressEntity : DOOPEntity {
+class DAddressEntity : DEntity {
   mixin(EntityThis!("AddressEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

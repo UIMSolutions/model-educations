@@ -4,7 +4,7 @@ module models.educations.entities.accomplishment;
 import models.educations;
 
 // 	This entity is used to store the accomplishments of a particular student
-class DAccomplishmentEntity : DOOPEntity {
+class DAccomplishmentEntity : DEntity {
   mixin(EntityThis!("AccomplishmentEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

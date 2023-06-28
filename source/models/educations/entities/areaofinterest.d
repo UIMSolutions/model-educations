@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of all area of studies offered by an institution. Areas of studies are more specific program offerings, such as Master's of Public Administration - Emergency Management.
 // name = Area of Interest instance name	
-class DAreaOfInterestEntity : DOOPEntity {
+class DAreaOfInterestEntity : DEntity {
   mixin(EntityThis!("AreaOfInterestEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

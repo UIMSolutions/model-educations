@@ -5,7 +5,7 @@ import models.educations;
 
 // The periods of time in which courses are offered by the institution, such as a term or semester.
 // name = name of the academic period.	
-class DAcademicPeriodEntity : DOOPEntity {
+class DAcademicPeriodEntity : DEntity {
   mixin(EntityThis!("AcademicPeriodEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

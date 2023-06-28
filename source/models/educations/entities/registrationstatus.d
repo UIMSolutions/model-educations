@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of registration statuses tracked by the institution. The registration status is associated to the student course history.
 // name = name of the custom entity.
-class DRegistrationStatusEntity : DOOPEntity {
+class DRegistrationStatusEntity : DEntity {
   mixin(EntityThis!("RegistrationStatusEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

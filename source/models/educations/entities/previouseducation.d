@@ -4,7 +4,7 @@ module models.educations.entities.internships.previouseducation;
 import models.educations;
 
 // The previous education history for a student.
-class DPreviousEducationEntity : DOOPEntity {
+class DPreviousEducationEntity : DEntity {
   mixin(EntityThis!("PreviousEducationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
