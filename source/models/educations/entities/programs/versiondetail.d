@@ -4,7 +4,7 @@ module models.educations.entities.programs.versiondetail;
 import models.educations;
 
 // The master list of program versions start dates defined by the institution.
-class DProgramVersionDetailEntity : DOOPEntity {
+class DProgramVersionDetailEntity : DEntity {
   mixin(EntityThis!("ProgramVersionDetailEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

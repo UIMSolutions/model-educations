@@ -5,7 +5,7 @@ import models.educations;
 
 // 	Base entity for process Internship Application Flow
 //  name = Description
-class DInternshipApplicationFlowEntity : DOOPEntity {
+class DInternshipApplicationFlowEntity : DEntity {
   mixin(EntityThis!("InternshipApplicationFlowEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

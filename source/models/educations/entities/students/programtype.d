@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of program types defined by the institution, such as major, minor, or concentration.
 // name = name of the program type.	      
-class DStudentProgramTypeEntity : DOOPEntity {
+class DStudentProgramTypeEntity : DEntity {
   mixin(EntityThis!("StudentProgramTypeEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

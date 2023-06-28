@@ -4,7 +4,7 @@ module models.educations.entities.programs.level;
 import models.educations;
 
 // Collection of all Program Levels offered by the institution
-class DProgramLevelEntity : DOOPEntity {
+class DProgramLevelEntity : DEntity {
   mixin(EntityThis!("ProgramLevelEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

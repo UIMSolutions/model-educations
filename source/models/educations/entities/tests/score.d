@@ -4,7 +4,7 @@ module models.educations.entities.tests.score;
 import models.educations;
 
 // Test scores for a Student Contact
-class DTestScoreEntity : DOOPEntity {
+class DTestScoreEntity : DEntity {
   mixin(EntityThis!("TestScoreEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

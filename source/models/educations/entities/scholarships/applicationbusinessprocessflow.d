@@ -4,7 +4,7 @@ module models.educations.entities.scholarships.applicationbusinessprocessflow;
 import models.educations;
 
 // Base entity for process Scholarship Application Business Process Flow
-class DScholarshipApplicationBusinessProcessFlowEntity : DOOPEntity {
+class DScholarshipApplicationBusinessProcessFlowEntity : DEntity {
   mixin(EntityThis!("ScholarshipApplicationBusinessProcessFlowEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

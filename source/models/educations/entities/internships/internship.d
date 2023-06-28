@@ -4,7 +4,7 @@ module models.educations.entities.internships.internship;
 import models.educations;
 
 // 	This entity stores the list of internships offered to a school by all business partners.
-class DInternshipEntity : DOOPEntity {
+class DInternshipEntity : DEntity {
   mixin(EntityThis!("InternshipEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

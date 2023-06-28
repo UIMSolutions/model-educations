@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of all program levels offered by the institution.
 // name = Program Name	
-class DProgramEntity : DOOPEntity {
+class DProgramEntity : DEntity {
   mixin(EntityThis!("ProgramEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.educations.entities.tests.type;
 import models.educations;
 
 // Type of test taken by a Student Contact
-class DTestTypeEntity : DOOPEntity {
+class DTestTypeEntity : DEntity {
   mixin(EntityThis!("TestTypeEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

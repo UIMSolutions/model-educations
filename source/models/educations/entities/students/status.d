@@ -5,7 +5,7 @@ import models.educations;
 
 // The master list of student statuses defined by the institution.
 // name = name of the custom entity.
-class DStudentStatusEntity : DOOPEntity {
+class DStudentStatusEntity : DEntity {
   mixin(EntityThis!("StudentStatusEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

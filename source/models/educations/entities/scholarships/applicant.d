@@ -5,7 +5,7 @@ import models.educations;
 
 // This entity is used as an scholarship application form and to store the list of students who have applied to a particular scholarship.
 // name = Required name field
-class DScholarshipApplicantEntity : DOOPEntity {
+class DScholarshipApplicantEntity : DEntity {
   mixin(EntityThis!("ScholarshipApplicantEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

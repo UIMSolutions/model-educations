@@ -4,7 +4,7 @@ module models.educations.entities.programs.version_;
 import models.educations;
 
 // The master list of all program versions defined by the institution.
-class DProgramVersionEntity : DOOPEntity {
+class DProgramVersionEntity : DEntity {
   mixin(EntityThis!("ProgramVersionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
